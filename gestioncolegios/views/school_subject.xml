@@ -1,0 +1,40 @@
+<odoo>
+    <record model="ir.ui.view" id="action_vista_subject_tree">
+        <field name="name">registro.subject.tree</field>
+        <field name="model">school.subject</field>
+        <field name="arch" type="xml">
+            <tree string="Tabla de los profesores">
+                <field name="name"/>
+                <field name="credits"/>
+                <field name="max_students"/>
+                <field name="active"/>
+                <!--                <field name="teacher_id"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="action_vista_subject_form">
+        <field name="name">registro.subject.form</field>
+        <field name="model">school.subject</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de los cursos">
+                <sheet>
+                    <group colspan="2">
+                        <group>
+                            <field name="name"/>
+                            <field name="credits"/>
+                            <field name="max_students"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                            <field name="teacher_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="student_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

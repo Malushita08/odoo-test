@@ -1,0 +1,39 @@
+<odoo>
+    <record model="ir.ui.view" id="action_vista_student_tree">
+        <field name="name">registro.student.tree</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree string="Tabla de estudiantes">
+                <field name="name"/>
+                <field name="age"/>
+                <field name="final_exam_grade"/>
+                <field name="approved"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="action_vista_student_form">
+        <field name="name">registro.student.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de los estudiantes">
+                <sheet>
+                    <group colspan="2">
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="birth_date"/>
+                            <field name="final_exam_grade"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="subject_ids"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

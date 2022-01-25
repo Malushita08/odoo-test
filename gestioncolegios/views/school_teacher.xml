@@ -1,0 +1,37 @@
+<odoo>
+    <record model="ir.ui.view" id="action_vista_teacher_tree">
+        <field name="name">registro.teacher.tree</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <tree string="Tabla de los profesores">
+                <field name="name"/>
+                <field name="profile"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="action_vista_teacher_form">
+        <field name="name">registro.teacher.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de los profesores">
+                <sheet>
+                    <group colspan="1">
+                        <group>
+                            <field name="name"/>
+                            <field name="profile"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="subject_ids" readonly="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="credits"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

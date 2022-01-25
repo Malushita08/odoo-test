@@ -1,0 +1,47 @@
+<odoo>
+    <!--DOCENTES-->
+    <record model="ir.actions.act_window" id="action_list_teacher">
+        <field name="name">Profesores del colegio</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--CURSOS-->
+    <record model="ir.actions.act_window" id="action_list_subject">
+        <field name="name">Cursos del colegio</field>
+        <field name="res_model">school.subject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--    ALUMNOS-->
+    <record model="ir.actions.act_window" id="action_list_student">
+        <field name="name">Alumnos del colegio</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--CREAMOS MENUS-->
+    <menuitem id="menu_principal"
+              name="Registro datos del colegio"/>
+
+    <menuitem id="menu_principal_registros"
+              name="Registros"
+              parent="menu_principal"/>
+
+    <menuitem id="menu_teacher"
+              name="Registro de profesores"
+              parent="menu_principal_registros"
+              action="action_list_teacher"/>
+
+    <menuitem id="menu_subject"
+              name="Registro de cursos"
+              parent="menu_principal_registros"
+              action="action_list_subject"/>
+
+    <menuitem id="menu_student"
+              name="Registro de estudiantes"
+              parent="menu_principal_registros"
+              action="action_list_student"/>
+
+
+</odoo>
